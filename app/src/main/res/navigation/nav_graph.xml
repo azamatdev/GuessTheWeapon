@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/whatIsThisWeapon"
+        android:name="com.example.guesstheweapon.ui.WhatIsThisWeapon"
+        android:label="fragment_what_is_this_weapon"
+        tools:layout="@layout/fragment_what_is_this_weapon" >
+        <action
+            android:id="@+id/action_whatIsThisWeapon_to_score2"
+            app:destination="@id/score2" />
+    </fragment>
+    <fragment
+        android:id="@+id/findItsName"
+        android:name="com.example.guesstheweapon.ui.FindItsName"
+        android:label="fragment_find_its_name"
+        tools:layout="@layout/fragment_find_its_name" >
+        <action
+            android:id="@+id/action_findItsName_to_score2"
+            app:destination="@id/score2" />
+    </fragment>
+    <fragment
+        android:id="@+id/trueOrFalse"
+        android:name="com.example.guesstheweapon.ui.TrueOrFalse"
+        android:label="fragment_true_or_false"
+        tools:layout="@layout/fragment_true_or_false" >
+        <action
+            android:id="@+id/action_trueOrFalse_to_score2"
+            app:destination="@id/score2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.guesstheweapon.ui.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_learnWeapons"
+            app:destination="@id/learnWeapons" />
+        <action
+            android:id="@+id/action_home2_to_gameActivity"
+            app:destination="@id/gameActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnWeapons"
+        android:name="com.example.guesstheweapon.ui.LearnWeapons"
+        android:label="fragment_learn_weapons"
+        tools:layout="@layout/fragment_learn_weapons" />
+    <fragment
+        android:id="@+id/gameActivity"
+        android:name="com.example.guesstheweapon.ui.GameActivity"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameActivity_to_whatIsThisWeapon"
+            app:destination="@id/whatIsThisWeapon" />
+        <action
+            android:id="@+id/action_gameActivity_to_findItsName"
+            app:destination="@id/findItsName" />
+        <action
+            android:id="@+id/action_gameActivity_to_trueOrFalse"
+            app:destination="@id/trueOrFalse" />
+    </fragment>
+    <fragment
+        android:id="@+id/score2"
+        android:name="com.example.guesstheweapon.ui.Score"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_score2_to_gameActivity"
+            app:destination="@id/gameActivity" />
+        <action
+            android:id="@+id/action_score2_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>
